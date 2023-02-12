@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use Illuminate\Support\Facades\DB;
 use Livewire\Component;
 
 class Article extends Component
@@ -23,6 +24,8 @@ class Article extends Component
 
     public function articles()
     {
-        return view('livewire.articles');
+        return view('livewire.articles',[
+            'articles' => DB::table('articles')->paginate(5),
+        ]);
     }
 }

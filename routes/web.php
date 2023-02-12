@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArticlesController;
 use App\Http\Livewire\Article;
 use Illuminate\Support\Facades\Route;
 
@@ -20,3 +21,4 @@ Route::controller(Article::class)->group(function(){
     Route::get('articles', 'articles')->name('articles.articles');
     Route::get('policy', 'policy')->name('articles.policy');
 });
+Route::resource('blogs', ArticlesController::class);

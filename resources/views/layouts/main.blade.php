@@ -32,7 +32,14 @@
     @livewireScripts
     <script>
         $(document).ready(function () {
-            $("#date").datepicker();
+            $("#date").datepicker({
+                numberOfMonths: 3,
+            });
+            $("#accord").accordion({
+                collapsible: true,
+                heightStyle: 'content',
+                active: 0
+            });
         });
     </script>
 </body>
