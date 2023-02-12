@@ -30,6 +30,11 @@
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     @livewireScripts
+    <script>
+        $(document).ready(function () {
+            $("#date").datepicker();
+        });
+    </script>
 </body>
 
 </html>
