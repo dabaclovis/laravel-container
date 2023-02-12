@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\Article;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::controller(Article::class)->group(function(){
+    Route::get('/', 'render')->name('articles.index');
+    Route::get('about', 'about')->name('articles.about');
+    Route::get('articles', 'articles')->name('articles.articles');
+    Route::get('policy', 'policy')->name('articles.policy');
 });
